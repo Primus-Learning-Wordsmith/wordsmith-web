@@ -9,14 +9,14 @@ pipeline {
         stage('Build Docker Image') {
             steps{
                 script{
-                    sh 'docker build -t Primus-Learning-Wordsmith/wordsmith-web .'
+                    sh 'docker build -t grace414/wordsmith_web:latest .'
                 }
             }
         }
         
         stage('Push to Dockerhub') {
             steps{
-                sh 'docker push Primus-Learning-Wordsmith/wordsmith-web'
+                sh 'docker push grace414/wordsmith_web:latest'
             }
         }
     }
